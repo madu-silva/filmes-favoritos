@@ -2,9 +2,9 @@ package com.madu.silva.filmesfavoritos.controllers;
 
 import com.madu.silva.filmesfavoritos.models.Usuario;
 import com.madu.silva.filmesfavoritos.services.UsuarioService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
