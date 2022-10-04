@@ -16,6 +16,7 @@ public class Filmes implements Serializable {
     String resumo;
     String capa;
 
+
     public Filmes() {
     }
 
