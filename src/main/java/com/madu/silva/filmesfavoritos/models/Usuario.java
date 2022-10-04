@@ -2,6 +2,8 @@ package com.madu.silva.filmesfavoritos.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "USUARIO")
@@ -14,6 +16,10 @@ public class Usuario implements Serializable {
     String nome;
     String email;
     String telefone;
+
+    @ManyToMany
+    @JoinTable(name = "tb_usuario_filme", joinColumns = @JoinColumn(name = "id_usuario"), inverseJoinColumns = @JoinColumn(name = "id_filme"))
+    private Set<Filmes> filmes = new HashSet<>();
 
     public Usuario() {
     }
@@ -56,5 +62,10 @@ public class Usuario implements Serializable {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public Set<Filmes> getFilmes() {
+        return filmes;
+    }
 }
+
 
