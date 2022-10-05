@@ -1,5 +1,6 @@
 package com.madu.silva.filmesfavoritos.controllers;
 
+import com.madu.silva.filmesfavoritos.models.Favoritos;
 import com.madu.silva.filmesfavoritos.models.Usuario;
 import com.madu.silva.filmesfavoritos.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,4 +46,10 @@ public class UsuarioController {
         return ResponseEntity.ok().body(usuarioAtualizado);
     }
 
+    /*@PostMapping(value = "/{idUsuario}/{idFilme}")
+    public ResponseEntity<Favoritos> favoritandoFilmesDoUsuario(@PathVariable Long idUsuario, @PathVariable Long idFilme) {
+        favoritandoFilme = favoritosService.favoritar()
+    }
+*/
 }
+

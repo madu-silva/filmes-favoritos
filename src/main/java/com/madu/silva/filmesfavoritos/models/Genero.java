@@ -1,5 +1,7 @@
 package com.madu.silva.filmesfavoritos.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -14,6 +16,7 @@ public class Genero implements Serializable {
     Integer id;
     String nome;
 
+    @JsonIgnore
     @ManyToMany
     @JoinTable(name = "tb_genero_filme", joinColumns = @JoinColumn(name = "id_genero"), inverseJoinColumns = @JoinColumn(name = "id_filme"))
     private Set<Filmes> filmes = new HashSet<>();

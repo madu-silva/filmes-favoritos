@@ -1,9 +1,6 @@
 package com.madu.silva.filmesfavoritos.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,8 +15,8 @@ public class Filmes implements Serializable {
     String nome;
     String resumo;
     String capa;
-    /*String genero; Criar uma tabela genero para fazer refencia com os ids?*/
-    String data_lancamento;
+    @Column(name = "data_lancamento")
+    String dataLancamento;
     Integer duracao;
 
     @ManyToMany(mappedBy = "filmes")
@@ -31,12 +28,12 @@ public class Filmes implements Serializable {
     public Filmes() {
     }
 
-    public Filmes(Integer id, String nome, String resumo, String capa, String data_lancamento, Integer duracao) {
+    public Filmes(Integer id, String nome, String resumo, String capa, String dataLancamento, Integer duracao) {
         this.id = id;
         this.nome = nome;
         this.resumo = resumo;
         this.capa = capa;
-        this.data_lancamento = data_lancamento;
+        this.dataLancamento = dataLancamento;
         this.duracao = duracao;
     }
 
@@ -73,11 +70,11 @@ public class Filmes implements Serializable {
     }
 
     public String getData_lancamento() {
-        return data_lancamento;
+        return dataLancamento;
     }
 
-    public void setData_lancamento(String data_lancamento) {
-        this.data_lancamento = data_lancamento;
+    public void setDataLancamento(String dataLancamento) {
+        this.dataLancamento = dataLancamento;
     }
 
     public Integer getDuracao() {
