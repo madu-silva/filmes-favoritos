@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "tb_usuario_filme")
-public class Favoritos implements Serializable {
+public class UsuariosFilmes implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -19,10 +19,10 @@ public class Favoritos implements Serializable {
     @Column(name = "id_filme")
     Integer idFilme;
 
-    public Favoritos() {
+    public UsuariosFilmes() {
     }
 
-    public Favoritos(Long idUsuario, Integer idFilme) {
+    public UsuariosFilmes(Long idUsuario, Integer idFilme) {
         this.idUsuario = idUsuario;
         this.idFilme = idFilme;
     }
