@@ -11,7 +11,7 @@ public class Filmes implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    Integer id;
+    Long id;
     String nome;
     String resumo;
     String capa;
@@ -28,7 +28,7 @@ public class Filmes implements Serializable {
     public Filmes() {
     }
 
-    public Filmes(Integer id, String nome, String resumo, String capa, String dataLancamento, Integer duracao) {
+    public Filmes(Long id, String nome, String resumo, String capa, String dataLancamento, Integer duracao) {
         this.id = id;
         this.nome = nome;
         this.resumo = resumo;
@@ -37,11 +37,11 @@ public class Filmes implements Serializable {
         this.duracao = duracao;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
